@@ -1,0 +1,23 @@
+.sexe-m {
+  font-weight: bold;
+  color: rgb(78, 165, 255);
+}
+.sexe-f {
+  font-weight: bold;
+  color: #ed3cb1;
+}
+.media-object {
+  max-width: 25px;
+}
+h1.ruler {
+  font-size: 6rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+h1.ruler span{
+  font-weight: bold;
+}
+h1.ruler i{
+  font-size: 5rem;
+  margin-right: 25px;
+}
