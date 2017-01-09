@@ -17,6 +17,12 @@
           <span class="sidebar-title">Accueil</span>
         </a>
       </li>
+      <li class="{{ Route::currentRouteName() === 'register.create' ? 'active' : '' }}">
+        <a href="{{ route('register.create') }}">
+          <span class="fa fa-plus-circle"></span>
+          <span class="sidebar-title">Ajouter un administrateur</span>
+        </a>
+      </li>
       <li>
         <a href="{{ route('ruler') }}">
           <span class="fa fa-sign-out"></span>

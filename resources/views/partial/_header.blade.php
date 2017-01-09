@@ -1,7 +1,7 @@
 <!-- Start: Header -->
 <header class="navbar navbar-fixed-top navbar-shadow">
   <div class="navbar-branding">
-    <a class="navbar-brand" href="dashboard.html">
+    <a class="navbar-brand" href="{{ route('welcome') }}">
       <i class="icon-ruler"></i> <b>Ruler</b>Admin
     </a>
     <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
@@ -32,19 +32,24 @@
     {{-- <li class="menu-divider hidden-xs">
       <i class="fa fa-circle"></i>
     </li> --}}
+
+    @if (Auth::guest())
+        <li><a href="{{ url('/login') }}">Se connecter</a></li>
+    @else
     <li class="dropdown menu-merge">
-      <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
-        <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/250/0b4/387c4eb.jpg" alt="avatar" class="mw30 br64">
-        <span class="hidden-xs pl15"> Nikolas E. </span>
+      <a href="#" class="dropdown-toggle fw600 p15 pt20" data-toggle="dropdown">
+        <span class="hidden-xs">{{ Auth::user()->name }}</span>
         <span class="caret caret-tp hidden-xs"></span>
       </a>
       <ul class="dropdown-menu list-group dropdown-persist w100" role="menu">
         <li class="dropdown-footer">
-          <a href="#" class="">
+          <a href="{{ url('/logout') }}">
           <span class="fa fa-power-off pr5"></span> Déconnexion </a>
         </li>
       </ul>
     </li>
+    @endif
+
   </ul>
 </header>
 <!-- End: Header -->
