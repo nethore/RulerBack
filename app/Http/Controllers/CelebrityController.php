@@ -36,7 +36,8 @@ class CelebrityController extends Controller
 
       if($validator->fails())
       {
-        return redirect('celebrity/create')
+        return redirect()
+           ->route('celebrity.create')
            ->withErrors($validator)
            ->withInput();
       }
@@ -60,7 +61,7 @@ class CelebrityController extends Controller
         $celebrity->picture_id = $request->picture;
         $celebrity->save();
 
-        return redirect('celebrity/create');
+        return redirect()->route('celebrity.create');
       }
     }
 
@@ -85,7 +86,8 @@ class CelebrityController extends Controller
 
       if($validator->fails())
       {
-        return redirect('celebrity/create')
+        return redirect()
+           ->route('celebrity.update')
            ->withErrors($validator)
            ->withInput();
       }

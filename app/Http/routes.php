@@ -11,22 +11,26 @@
 |
 */
 
-Route::get('/', 'PageController@welcome')->name('welcome');
+Route::get('/admin', 'PageController@welcome')->name('welcome');
 
-Route::group(['prefix' => 'celebrity'], function () {
+Route::group(['prefix' => '/admin/celebrity'], function () {
   Route::get('/index', 'CelebrityController@index')->name('celebrity.index');
   Route::get('/remove/{id}', 'CelebrityController@remove')->name('celebrity.remove');
   Route::any('/create', 'CelebrityController@create')->name('celebrity.create');
   Route::any('/update/{id}', 'CelebrityController@update')->name('celebrity.update');
 });
 
-Route::group(['prefix' => 'picture'], function () {
+Route::group(['prefix' => '/admin/picture'], function () {
   Route::get('/index', 'PictureController@index')->name('picture.index');
   Route::get('/remove/{id}', 'PictureController@remove')->name('picture.remove');
   Route::any('/create', 'PictureController@create')->name('picture.create');
   Route::any('/update/{id}', 'PictureController@update')->name('picture.update');
 });
 
-Route::get('/json', function () {
+Route::get('/json', ['middleware' => 'cors', function () {
     return App\Celebrity::all();
-});
+}]);
+
+Route::get('/', function(){
+    return view('ruler/index');
+})->name('ruler');

@@ -18,7 +18,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="{{ route('ruler') }}">
           <span class="fa fa-sign-out"></span>
           <span class="sidebar-title">Se rendre sur le site</span>
         </a>

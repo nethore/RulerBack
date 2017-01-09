@@ -21,6 +21,16 @@ class Celebrity extends Model
       return $pictureUrl;
   }
 
+  public function getGenderAttribute($value) {
+      if ($this->attributes['gender'] == 1) {
+        return true;
+      }
+      else {
+        return false;
+      }
+  }
+
+
   public static function getNbrCelebrities()
   {
     return DB::table('celebrity')
@@ -39,7 +49,6 @@ class Celebrity extends Model
               ->where('gender', 1)
               ->count();
   }
-
 
   public function picture()
   {

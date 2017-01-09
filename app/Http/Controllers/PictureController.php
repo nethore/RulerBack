@@ -31,7 +31,7 @@ class PictureController extends Controller
 
       if($validator->fails())
       {
-        return redirect('picture/create')
+        return redirect()->route('picture.create')
            ->withErrors($validator)
            ->withInput();
       }
@@ -55,7 +55,7 @@ class PictureController extends Controller
 
         $picture->save();
 
-        return redirect('picture/create');
+        return redirect()->route('picture.create');
       }
     }
 
@@ -76,7 +76,7 @@ class PictureController extends Controller
 
       if($validator->fails())
       {
-        return redirect('picture/update')
+        return redirect()->route('picture.update')
            ->withErrors($validator)
            ->withInput();
       }
@@ -97,7 +97,7 @@ class PictureController extends Controller
 
         $picture->save();
 
-        return redirect('picture/index');
+        return redirect()->route('picture.index');
       }
     }
 
