@@ -1,0 +1,15 @@
+<main ng-controller="listCtrl">
+  <div class="list">
+    <div class="content-list">
+      <h3>Derniers ajouts</h3>
+      <div class="columns">
+        <ul>
+          <li ng-repeat="perso in persos | limitTo:27 | orderBy:'-' track by perso.id">{{ perso.firstname }} <strong>{{ perso.lastname }}</strong> <span style="font-size:1rem">({{ perso.size }} cm)</span></li>
+          <li>
+              Et plus à venir ...
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>

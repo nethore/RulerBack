@@ -5,6 +5,7 @@
     </a>
     <ul>
       <li><a href="#/">Accueil</a></li>
+      <li><a href="#/list">Ajouts récents</a></li>
       <li><a href="#/about">A propos</a></li>
       <li><a href="/admin">Admin</a></li>
     </ul>

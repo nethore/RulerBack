@@ -13,7 +13,7 @@
     </div>
     <!-- Demo Text Content -->
     <div class="pl15 pr50">
-      <h4>Bienvenue dans l'administration de Ruler</h4>
+      <h4>Bienvenue dans l'administration de Ruler !</h4>
       <hr class="alt short">
     </div>
     <div class="row p15">

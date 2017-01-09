@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/fonts.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('dist/css/main.min.css') }}">
 
 
@@ -34,6 +35,6 @@
     <![endif]-->
   </head>
 
-  @include('ruler/index-angular');
+  @include('ruler/index-angular')
 
 </html>

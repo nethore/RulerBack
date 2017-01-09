@@ -120,7 +120,7 @@
               <i class="fa fa-venus woman" aria-hidden="true"></i>
             </div>
             <div>
-              <input type="submit" class="hvr-btn" value="Ajouter votre avatar">
+              <input type="submit" class="hvr-btn" value="Ajouter votre avatar" ng-disabled="persoSelected.length >= 3">
             </div>
             </form>
         </div>
@@ -157,33 +157,19 @@
               <i class="fa fa-venus woman" aria-hidden="true"></i>
             </div>
             <div>
-              <input type="submit" class="hvr-btn" value="Ajouter votre avatar">
+              <input type="submit" class="hvr-btn" value="Ajouter votre avatar" ng-disabled="persoSelected.length >= 3">
             </div>
             </form>
         </div>
 
       </div>        <!-- -->
     </div>
-    <!-- <nav>
-      <div>
-        <i class="icon-man face"></i>
-        <p>
-          Barack <strong>Obama</strong>
-        </p>
-        <a href="#"><i class="icon-trash"></i></a>
-      </div>
-      <div>
-        <i class="icon-man face"></i>
-        <p>
-          Nicolas <strong>Sarkozy</strong>
-        </p>
-        <a href="#"><i class="icon-trash"></i></a>
-      </div>
-
-    </nav> -->
     <div class="welcome" ng-show="persoSelected.length == 0">
       <h3>Bienvenue sur <span>Ruler</span> !</h3>
       <h4> Commencez à ajouter des personnalités en utilisant le menu de droite <i class="fa fa-arrow-right" aria-hidden="true"></i></h4>
+    </div>
+    <div class="shaking-arrow animated shake" ng-show="persoSelected.length == 0">
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
     </div>
     <div class="persos">
 
