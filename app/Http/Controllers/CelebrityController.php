@@ -29,6 +29,7 @@ class CelebrityController extends Controller
 
       $validator = Validator::make($request->all(), [
         'firstname' => 'required|min:2',
+        'picture' => 'required',
         'lastname' => 'required|min:2',
         'gender' => 'required',
         'size' => 'required|integer|between:50,215'
@@ -79,6 +80,7 @@ class CelebrityController extends Controller
 
       $validator = Validator::make($request->all(), [
         'firstname' => 'required|min:2',
+        'picture' => 'required',
         'lastname' => 'required|min:2',
         'gender' => 'required',
         'size' => 'required|integer|between:50,215'

@@ -77,7 +77,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <select class="selectpicker" data-live-search="true" id="picture" name="picture">
-                      <option value="" selected disabled>Photo</option>
+                      <option value="0" selected disabled>Photo</option>
                       @foreach($pictures as $picture)
                         <option value="{{ $picture->id }}"
                           @if($celebrity->picture_id == $picture->id)
