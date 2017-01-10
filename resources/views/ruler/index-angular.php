@@ -5,9 +5,10 @@
     </a>
     <ul>
       <li><a href="#/">Accueil</a></li>
-      <li><a href="#/list">Ajouts récents</a></li>
+      <li><a href="#/list">Liste des personnalités</a></li>
       <li><a href="#/about">A propos</a></li>
-      <li><a href="/admin">Admin</a></li>
+      <li><a href="/admin"><i class="fa fa-tachometer" style="margin-right:10px" aria-hidden="true"></i>
+ Admin</a></li>
     </ul>
  </div>
  <div id="help">
