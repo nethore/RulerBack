@@ -184,7 +184,7 @@
           <i ng-show="perso.gender" class="icon-man face"></i>
           <i ng-show="!perso.gender" class="icon-woman face"></i>
           <p>
-            {{ perso.firstname }} <strong>{{ perso.lastname }}</strong>
+            {{ perso.firstname.substr(0,1) }}. <strong>{{ perso.lastname }}</strong>
           </p>
           <a ng-click="deletePerso(perso.id)"><i class="icon-trash"></i></a>
         </div>
